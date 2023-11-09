@@ -1,20 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import WelcomeScreen from "./screens/WelcomeScreen";
+import AppDaniIMC from "./screens/daniIMC/AppDaniIMC";
+import AppJuanIMC from "./screens/juanIMC/AppJuanIMC";
+import PiedraPapelTijeraApp from "./screens/juegoPiedra/AppJuegoReact";
+import AppSimulador from "./screens/simuladorPrestamo/AppSimulador";
+import { createAppContainer } from "react-navigation";
+import { createStackNavigator } from "react-navigation-stack";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default createAppContainer(
+  createStackNavigator(  { WelcomeScreen, AppDaniIMC, AppJuanIMC, PiedraPapelTijeraApp, AppSimulador},
+    { initialRouteName: "WelcomeScreen" }));
