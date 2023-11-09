@@ -23,11 +23,11 @@ const CustomSlider = ({label, inputValue, onChange, min, max, isCurrency, step})
     />
     <View style={styles.flexRow}>
     {isCurrency ?
-    <Text style={{color: 'white', fontSize: 15}}>$ {max}</Text> :
-    <Text style={{color: 'white', fontSize: 15}}>{max}</Text>}
-    {isCurrency ?
-    <Text style={{color: 'white', fontSize: 15}}>$ {min}</Text>:
+    <Text style={{color: 'white', fontSize: 15}}>$ {min}</Text> :
     <Text style={{color: 'white', fontSize: 15}}>{min}</Text>}
+    {isCurrency ?
+    <Text style={{color: 'white', fontSize: 15}}>$ {max}</Text>:
+    <Text style={{color: 'white', fontSize: 15}}>{max}</Text>}
     </View>
   </View>
 );
